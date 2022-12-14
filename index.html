@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Off Tube</title>
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/main.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <br><br>
+
+  <!--<center><img class="logo" src="https://cdn.pixabay.com/photo/2016/07/03/18/36/youtube-1495277_960_720.png">
+  </center>-->
+  <br>
+  <center>
+    <form style="margin-top: 254px; margin-left:-151px;" action="load" method="POST">
+      {% for message in get_flashed_messages()%}
+      <p> {{message}} </p>
+      {% endfor %}
+      <input type="text" name="link_input" class="select" placeholder="Enter the youtube URL here">
+      <br>
+
+      <input style=" margin-top: -100px;
+      right: -27px;
+      margin-right: -690px;
+      margin-left: 63px;
+  " class="w3-btn w3-black w3-border w3-round-large" type="submit" value="Download" id="send">
+
+    </form>
+  </center>
+  <script src="index.js"></script>
+</body>
+
+</html>
